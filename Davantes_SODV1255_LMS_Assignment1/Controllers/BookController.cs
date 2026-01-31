@@ -37,7 +37,7 @@ namespace Davantes_SODV1255_LMS_Assignment1.Controllers {
         }
 
 
-        // PUT /books/1
+        //PUT /books/1
         [HttpPut("{id}")]
         public IActionResult UpdateBook(int id) {
             Book editBook = new Book(id, "The Silent Code", "Alex Harper", "Blue Oak Press", "2018", true);
@@ -45,9 +45,9 @@ namespace Davantes_SODV1255_LMS_Assignment1.Controllers {
             return Json(new { message = $"Book with ID of {editBook.ID} is updated", book = editBook });
         }
 
-        // DELETE /books/1
+        //DELETE /books/1
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id) {
+        public IActionResult DeleteBook(int id) {
             return Json(new { message = $"Book with ID of {id} is deleted"});
 
         }
