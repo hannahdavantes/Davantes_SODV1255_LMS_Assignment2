@@ -4,18 +4,6 @@ var app = builder.Build();
 // HOME ROUTE
 app.MapGet("/", () => "HOME PAGE");
 
-// STAFF 
-// Get all staffs
-app.MapGet("/staff", () => "GET ALL STAFFS");
-// Get a staff by ID
-app.MapGet("/staff/{id}", (int id) => $"GET STAFF BY ID:{id}");
-// Create a new staff
-app.MapPost("/staff", () => "CREATE NEW STAFF");
-// Update an existing staff member by ID    
-app.MapPut("/staff/{id}", (int id) => $"UPDATE STAFF BY ID: {id}");
-// Delete a staff member by ID
-app.MapDelete("/staff/{id}", (int id) => $"DELETE STAFF BY ID: {id}");
-
 // READER 
 // Get all readers
 app.MapGet("/reader", () => "GET ALL READERS");
