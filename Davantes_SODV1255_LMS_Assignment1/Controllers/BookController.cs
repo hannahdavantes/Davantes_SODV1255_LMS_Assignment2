@@ -11,14 +11,11 @@ namespace Davantes_SODV1255_LMS_Assignment1.Controllers {
         [HttpGet]
         public IActionResult GetAllBooks() {
 
-            List<Book> books = new List<Book>()
-{
+            List<Book> books = new List<Book>(){
                 new Book(1, "The Silent Code", "Alex Harper", "Blue Oak Press", "2018", true),
                 new Book(2, "Shadows of Tomorrow", "Lena Brooks", "Northwind Publishing", "2020", true),
                 new Book(3, "Echoes in the Grid", "Marcus Lee", "Ironleaf Books", "2019", true),
-              
             };
-
             return Json(books);
         }
 
@@ -41,7 +38,6 @@ namespace Davantes_SODV1255_LMS_Assignment1.Controllers {
         [HttpPut("{id}")]
         public IActionResult UpdateBook(int id) {
             Book editBook = new Book(id, "The Silent Code", "Alex Harper", "Blue Oak Press", "2018", true);
-
             return Json(new { message = $"Book with ID of {editBook.ID} is updated", book = editBook });
         }
 
@@ -49,7 +45,6 @@ namespace Davantes_SODV1255_LMS_Assignment1.Controllers {
         [HttpDelete("{id}")]
         public IActionResult DeleteBook(int id) {
             return Json(new { message = $"Book with ID of {id} is deleted"});
-
         }
     }
 }
